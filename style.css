@@ -1,0 +1,205 @@
+/* Resetting default styles for better consistency */
+body, h1, h2, p, ul, li, form, input, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box; /* Important: Makes padding and border included in the element's total width and height */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A more modern font */
+    line-height: 1.6; /* Improved readability */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+/* -------------------- Theme Styles -------------------- */
+
+/* Light Theme */
+body.light-theme {
+    background-color: #f9f9f9; /* A softer background */
+    color: #333; /* Darker text for contrast */
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #1a1a2e;  /* A darker background */
+    color: #fff;
+    /* Cool gradient for dark theme */
+    background: linear-gradient(to bottom, #2c3e50, #1a1a2e);
+}
+
+/* -------------------- Header Styles -------------------- */
+
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent header */
+    color: #fff;
+    padding: 1rem 2rem; /* Modern padding */
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensure it stays on top */
+}
+
+.header-content {
+    flex-grow: 1;
+    text-align: left; /* Align player name to the left */
+}
+
+header h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+/* -------------------- Theme Toggle Styles -------------------- */
+
+.theme-toggle {
+    padding: 0.5rem;
+}
+
+.theme-toggle button {
+    background-color: #6c5b7b; /* A stylish button color */
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Hover effect */
+}
+
+.theme-toggle button:hover {
+    background-color: #355c7d;
+}
+
+/* -------------------- Main Chat Container Styles -------------------- */
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 180px); /* Ensure it takes up most of the screen */
+    max-width: 800px; /* Limiting width for better readability */
+    margin: 0 auto; /* Center the content */
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Occupy available space */
+}
+
+/* -------------------- Chat Display Styles -------------------- */
+
+.chat-display {
+    flex-grow: 1;
+    overflow-y: auto; /* Scrollable chat */
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.message {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 20px;
+    word-wrap: break-word; /* Prevent long words from breaking the layout */
+    max-width: 70%; /* Limit message width */
+}
+
+.message.user {
+    background-color: #4a90e2; /* Blue for user messages */
+    color: #fff;
+    align-self: flex-end; /* Align to the right */
+}
+
+.message.model {
+    background-color: #e4e6eb; /* Light grey for model messages */
+    color: #000;
+    align-self: flex-start; /* Align to the left */
+}
+
+/* -------------------- Chat Input Styles -------------------- */
+
+.chat-input {
+    display: flex;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.chat-input input[type="text"] {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.chat-input button {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+    background-color: #357abd;
+}
+
+/* -------------------- Player Input Styles -------------------- */
+
+.player-input {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.player-input input[type="text"] {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 60%;
+    max-width: 300px;
+}
+
+.player-input button {
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.player-input button:hover {
+    background-color: #449d44;
+}
+
+/* -------------------- Footer Styles -------------------- */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+}
+
+/* -------------------- Error Message Styles -------------------- */
+
+.error-message {
+    color: #d9534f; /* Red color */
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 0.75rem;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    border-radius: 5px;
+}
